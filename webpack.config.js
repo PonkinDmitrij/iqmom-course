@@ -64,6 +64,7 @@ module.exports = {
         host: 'localhost',
         port: 3100,
         proxy: 'http://localhost:3000/',
+        tunnel: true,
       },
       {
         reload: false,
