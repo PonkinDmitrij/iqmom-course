@@ -1,0 +1,31 @@
+.main-nav {
+  padding: 5px 0;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba($gray-lightest, 0.7);
+
+    &:hover {
+      background-color: $gray-lightest;
+    }
+  }
+
+  &__link-text {
+    @include visually-hidden();
+  }
+
+  &__link-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      stroke: $black;
+    }
+  }
+}
