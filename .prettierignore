@@ -1,1 +1,2 @@
 src/scss/variables.scss
+src/scss/mixins/grid-mixins.scss
