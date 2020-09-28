@@ -1,30 +1,32 @@
-$screen-xs: 0 !default;
-$screen-sm: 480px !default;
-$screen-md: 768px !default;
-$screen-lg: 992px !default;
-$screen-xl: 1200px !default;
+$screen-xs:                   0 !default;
+$screen-sm:                   480px !default;
+$screen-md:                   768px !default;
+$screen-lg:                   992px !default;
+$screen-xl:                   1200px !default;
 // $screen-xxl:                  1800px !default;
 
-$container-sm: 100% !default;
-$container-md: 100% !default;
-$container-lg: ($screen-lg - 30) !default;
-$container-xl: ($screen-xl - 30) !default;
+$container-sm:                100% !default;
+$container-md:                100% !default;
+$container-lg:                ($screen-lg - 30) !default;
+$container-xl:                ($screen-xl - 30) !default;
 // $container-xxl:               ($screen-xxl - 30) !default;
 
-$grid-columns: 12 !default;
-$grid-gutter-width: 30px !default;
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+
+
 
 //------------------------------------------------------------------------------
 //  Генератор правил для контейнера
 //------------------------------------------------------------------------------
 
 @mixin container(
-  $xs-grid-gutter: $grid-gutter-width,
-  $sm-grid-gutter: $grid-gutter-width,
-  $md-grid-gutter: $grid-gutter-width,
-  $lg-grid-gutter: $grid-gutter-width,
-  $xl-grid-gutter: $grid-gutter-width,
-   // $xxl-grid-gutter: $grid-gutter-widt
+  $xs-grid-gutter:  $grid-gutter-width,
+  $sm-grid-gutter:  $grid-gutter-width,
+  $md-grid-gutter:  $grid-gutter-width,
+  $lg-grid-gutter:  $grid-gutter-width,
+  $xl-grid-gutter:  $grid-gutter-width,
+  // $xxl-grid-gutter: $grid-gutter-width
 ) {
   display: block;
   width: 100%;
@@ -82,6 +84,8 @@ $grid-gutter-width: 30px !default;
   // }
 }
 
+
+
 //------------------------------------------------------------------------------
 //  Генератор правил для прямого родителя модульной сетки
 //------------------------------------------------------------------------------
@@ -109,18 +113,17 @@ $grid-gutter-width: 30px !default;
 //------------------------------------------------------------------------------
 
 @mixin row(
-  $xs-grid-gutter: $grid-gutter-width,
-  $sm-grid-gutter: $grid-gutter-width,
-  $md-grid-gutter: $grid-gutter-width,
-  $lg-grid-gutter: $grid-gutter-width,
-  $xl-grid-gutter: $grid-gutter-width,
-   // $xxl-grid-gutter: $grid-gutter-widt
+  $xs-grid-gutter:  $grid-gutter-width,
+  $sm-grid-gutter:  $grid-gutter-width,
+  $md-grid-gutter:  $grid-gutter-width,
+  $lg-grid-gutter:  $grid-gutter-width,
+  $xl-grid-gutter:  $grid-gutter-width,
+  // $xxl-grid-gutter: $grid-gutter-width
 ) {
   display: flex;
   flex-wrap: wrap;
 
   & > * {
-    // stylelint-disable-line  selector-combinator-blacklist, plugin/selector-bem-pattern
     flex-basis: 100%;
   }
 
@@ -166,6 +169,8 @@ $grid-gutter-width: 30px !default;
   // }
 }
 
+
+
 //------------------------------------------------------------------------------
 //  Генератор ширины ячейки
 //------------------------------------------------------------------------------
@@ -181,6 +186,8 @@ $grid-gutter-width: 30px !default;
   flex: 0 0 $width;
   max-width: $width;
 }
+
+
 
 //------------------------------------------------------------------------------
 //  Генератор правил для одной ячейки
@@ -206,6 +213,8 @@ $grid-gutter-width: 30px !default;
   }
 }
 
+
+
 //------------------------------------------------------------------------------
 //  Генератор правил для одной ячейки с возможностью указать @media
 //------------------------------------------------------------------------------
@@ -217,10 +226,10 @@ $grid-gutter-width: 30px !default;
 //------------------------------------------------------------------------------
 
 @mixin col(
-  $screen: xs,
-  $column: $grid-columns,
+  $screen:  xs,
+  $column:  $grid-columns,
   $columns: $grid-columns,
-  $gutter: $grid-gutter-width
+  $gutter:  $grid-gutter-width
 ) {
   @if ($screen == xs) {
     @include make-col($column, $columns, $gutter);
@@ -257,6 +266,8 @@ $grid-gutter-width: 30px !default;
   //   }
   // }
 }
+
+
 
 //------------------------------------------------------------------------------
 //  Генератор правил для отступа одной ячейки с возможностью указать @media
