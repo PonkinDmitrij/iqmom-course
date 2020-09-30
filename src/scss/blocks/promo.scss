@@ -1,0 +1,32 @@
+.promo {
+  text-align: center;
+  color: $white;
+  background-color: $color-main;
+
+  svg {
+    display: block;
+  }
+
+  &__inner {
+    @include container();
+  }
+
+  &__title {
+    margin: 0 0 50px;
+    color: $white;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  &__item-title {
+    font-size: 26px;
+    color: $gray-darken;
+  }
+
+  &__item-text {
+    font-size: 22px;
+    color: inherit;
+  }
+}
