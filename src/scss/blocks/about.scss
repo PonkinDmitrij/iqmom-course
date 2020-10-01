@@ -1,0 +1,38 @@
+.about {
+  $marker-size: 40px;
+
+  padding: 50px 0;
+  background-color: $color-secondary;
+
+  &__inner {
+    @include container();
+  }
+
+  &__title {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  &__list {
+    padding-left: 0;
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 6px;
+    padding-left: 55px;
+    margin-bottom: 25px;
+    list-style: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $marker-size;
+      height: $marker-size;
+      border-radius: 50%;
+      background: url('../img/icons/check-mark.svg') center / cover no-repeat;
+    }
+  }
+}
