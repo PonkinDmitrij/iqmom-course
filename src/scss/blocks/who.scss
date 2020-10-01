@@ -1,0 +1,21 @@
+.who {
+  padding: 50px 0;
+
+  &__inner {
+    @include container();
+  }
+
+  &__title {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  &__desc {
+    font-size: 20px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-style: italic;
+  }
+}
