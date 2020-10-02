@@ -17,6 +17,16 @@
     @include container();
   }
 
+  &__grid {
+    @include row();
+  }
+
+  &__col {
+    @include col();
+    @include col(md, 8);
+    @include col-offset(md, 2);
+  }
+
   &__title {
     margin-top: 0;
     text-align: center;
