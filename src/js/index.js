@@ -1,8 +1,25 @@
 import '../scss/style.scss';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 const arrToBottom = document.querySelector('.banner__to-bottom');
 const targetId = document.querySelector('#promo');
 
 arrToBottom.addEventListener('click', () => {
   targetId.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+Swiper.use([Navigation, Pagination]);
+
+const mySwiper = new Swiper('.swiper-container', {
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'progressbar',
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
