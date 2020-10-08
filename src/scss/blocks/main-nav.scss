@@ -13,6 +13,15 @@
     &:hover {
       background-color: $gray-lightest;
     }
+
+    &:active,
+    &:focus {
+      outline: none;
+
+      @media (any-pointer: fine) {
+        @include field-focus();
+      }
+    }
   }
 
   &__link-text {

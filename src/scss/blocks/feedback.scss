@@ -49,9 +49,12 @@
     border: none;
     background-color: transparent;
 
-    @media (any-pointer: coarse) {
-      &:focus {
-        outline: none;
+    &:active,
+    &:focus {
+      outline: none;
+
+      @media (any-pointer: fine) {
+        @include field-focus();
       }
     }
   }

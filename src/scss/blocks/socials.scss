@@ -20,11 +20,12 @@
       opacity: $opacity;
     }
 
+    &:active,
     &:focus {
       outline: none;
 
       @media (any-pointer: fine) {
-        box-shadow: 0 0 0 3px #2f7cc0;
+        @include field-focus();
       }
     }
 
