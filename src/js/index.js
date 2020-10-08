@@ -2,12 +2,12 @@ import '../scss/style.scss';
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 const arrToBottom = document.querySelector('.banner__to-bottom');
-const targetId = document.querySelector('#promo');
+const promo = document.querySelector('#promo');
 const bannerBuy = document.querySelector('.banner__buy');
 const products = document.querySelector('#products');
 
 arrToBottom.addEventListener('click', () => {
-  targetId.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  promo.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
 bannerBuy.addEventListener('click', (evt) => {
