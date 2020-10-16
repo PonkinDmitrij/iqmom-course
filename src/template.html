@@ -1,4 +1,8 @@
-<% var data = { path: 'planting-course-buy' }; %>
+<!-- prettier-ignore -->
+<% var data = {
+  path: 'planting-course-buy',
+  title: 'Купить курс по высаживанию'
+}; %>
 
 <!DOCTYPE html>
 <html class="page" lang="ru">
@@ -14,7 +18,7 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="msapplication-config" content="./<%= data.path %>/img/favicon/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
-    <title>Course</title>
+    <title><%- data.title %></title>
   </head>
   <body>
     <div class="page__inner">
@@ -38,7 +42,7 @@
           <section class="banner">
             <div class="banner__inner">
               <div class="banner__fullscreen">
-                <h1 class="banner__title">Купить курс по высаживанию</h1>
+                <h1 class="banner__title"><%- data.title %></h1>
 
                 <div class="banner__grid">
                   <div class="banner__col">
