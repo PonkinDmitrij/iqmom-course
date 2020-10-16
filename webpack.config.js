@@ -40,7 +40,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({
-      template: 'course.html',
+      template: 'template.html',
       filename: `${NAME}.html`,
       minify: {
         removeComments: isProd,
